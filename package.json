@@ -30,8 +30,8 @@
     "express-ejs-layouts": "^2.2.0"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-live-server": "0.0.30",
-    "gulp-open": "^2.0.0"
+    "gulp": "^4.0.0",
+    "gulp-live-server": "0.0.31",
+    "gulp-open": "^3.0.1"
   }
 }
