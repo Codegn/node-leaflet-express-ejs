@@ -6,6 +6,9 @@ var express = require('express');
 // get port from environment and store in Express
 var app = express();
 
+// references the main folder to be able to find css files to link in the head file
+app.use(express.static(__dirname + '/views'));
+
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
