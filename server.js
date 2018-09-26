@@ -26,4 +26,4 @@ app.get('/about', function(req, res) {
 // Get port from environment and store in Express
 var port = process.env.PORT || 3000;
 app.listen(port)
-console.log('Server is listening on port', port)
+console.log('Server is listening on port', port, 'http://localhost:3000/')
