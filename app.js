@@ -2,15 +2,17 @@
 
 // module dependencies
 var express = require('express');
+var path = require('path');
 
 // get port from environment and store in Express
 var app = express();
 
-// references the main folder to be able to find css files to link in the head file
-app.use(express.static(__dirname + '/views'));
-
-// set the view engine to ejs
+// view engine setup
+app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');
+
+// set path for static assets
+app.use(express.static(path.join(__dirname, '/public')));
 
 // use res.render to load up an ejs view file
 // index page
@@ -18,9 +20,9 @@ app.get('/', function(req, res) {
 	res.render('pages/index');
 });
 
-// about page
-app.get('/about', function(req, res) {
-	res.render('pages/about');
+// settings page
+app.get('/settings', function(req, res) {
+	res.render('pages/settings');
 });
 
 // Get port from environment and store in Express
